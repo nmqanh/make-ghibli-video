@@ -32,7 +32,11 @@ function App({ slides, logoUrl }) {
           className={currentSlideIdx === index ? 'slide active': 'slide'}
           style={{ backgroundImage: `url(${slide.imageUrl})` }}
         >
-          <p>{slide.content}</p>
+          <p style={{
+            color: slide.textColor
+          }}>
+            {slide.content}
+          </p>
         </section>
       ))}
       <img
@@ -60,21 +64,25 @@ App.defaultProps = {
       imageUrl: 'https://media1.giphy.com/media/xKDTLosMl4XZu/giphy.gif',
       content: 'This is page 1',
       seconds: 5,
+      textColor: "#E30545",
     },
     {
       imageUrl: 'https://media3.giphy.com/media/qKmWi9mfycx6E/giphy.gif',
       content: 'This is page 2',
       seconds: 5,
+      textColor: "#0579FE",
     },
     {
       imageUrl: 'https://media1.giphy.com/media/yALcFbrKshfoY/giphy.gif',
       content: 'This is page 3',
       seconds: 5,
+      textColor: "#FFFFFF",
     },
     {
       imageUrl: 'https://media1.giphy.com/media/coaTo9TVvOOIg/giphy.gif',
       content: 'This is page 4',
       seconds: 5,
+      textColor: "#693CC5",
     }
   ]
 }
